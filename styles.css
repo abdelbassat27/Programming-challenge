@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    animation: fadeIn 1s ease-in;
+    direction: rtl; /* تحديد الاتجاه من اليمين لليسار */
+}
+
+.game-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    animation: slideIn 1s ease-out;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+h1:hover {
+    color: #007bff;
+    transform: scale(1.1);
+}
+
+.task {
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-out;
+}
+
+.editor {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 90%;
+    height: 180px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: monospace;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    direction: rtl; /* تحديد الاتجاه من اليمين لليسار */
+    text-align: right; /* محاذاة النص إلى اليمين */
+}
+
+textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0,123,255,0.5);
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+/* إضافة الأنماط للزر "إعادة التحدي" */
+button.restart-challenge {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffc107;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button.restart-challenge:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+}
+
+
+.result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 4px;
+    animation: fadeIn 1s ease-in;
+}
+
+.result.success {
+    color: #28a745; /* لون أخضر */
+    background-color: #d4edda; /* خلفية خضراء فاتحة */
+    border: 1px solid #c3e6cb;
+}
+
+.result.error {
+    color: #dc3545; /* لون أحمر */
+    background-color: #f8d7da; /* خلفية حمراء فاتحة */
+    border: 1px solid #f5c6cb;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.hint {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #e9ecef; /* خلفية خفيفة */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: opacity 0.3s ease;
+}
+
+.hint.hidden {
+    display: none;
+}
+#next-question {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #28a745;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#next-question:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}

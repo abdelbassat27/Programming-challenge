@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحدي البرمجة</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>تحدي بناء صفحة HTML</h1>
+        </header>
+        <main>
+            <section class="task">
+                <h2>المهمة:</h2>
+                <p id="question-text">بناء صفحة HTML تحتوي على العناوين والفقرات والصور.</p>
+                <button onclick="toggleHint()">عرض التلميح</button>
+                <div id="hint" class="hint hidden">
+                    <p id="hint-text">تأكد من أن الصفحة تحتوي على عنصر `<h1>`, `<p>`, و `<img>` في الأماكن الصحيحة.</p>
+                </div>
+            </section>
+            <section class="editor">
+                <textarea id="html-code" placeholder="اكتب هنا كود HTML..."></textarea>
+                <button onclick="checkCode()">تحقق من الكود</button>
+            </section>
+            <section class="result" id="result">
+                <!-- سيتم عرض النتيجة هنا -->
+            </section>
+        </main>
+        <footer>
+            <p> تعليم البرمجة 2024 ©</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
